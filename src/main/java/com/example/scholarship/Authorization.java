@@ -30,6 +30,42 @@ public class Authorization {
                 System.out.println("Логин:" + login.getText());
                 System.out.println("Пароль:" + pass.getText());
                 button1.getScene().getWindow().hide();
+                try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Dell\\IdeaProjects\\Scholarship\\src\\main\\resources\\com\\example\\scholarship\\accountantP.txt"))) {
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        if (line.equals(pass.getText().trim())) {
+                            try {
+                                FXMLLoader loader = new FXMLLoader();
+                                loader.setLocation(getClass().getResource("Groups.fxml"));
+                                loader.load();
+                                Parent root = loader.getRoot();
+                                Stage stage = new Stage();
+                                stage.setScene(new Scene(root));
+                                stage.show();
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            System.out.println("Верный пароль");
+                        } else {
+                            try {
+                                FXMLLoader loader = new FXMLLoader();
+                                loader.setLocation(getClass().getResource("Error.fxml"));
+                                loader.load();
+                                Parent root = loader.getRoot();
+                                Stage stage = new Stage();
+                                stage.setScene(new Scene(root));
+                                stage.show();
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            System.out.println("Данные введены некорректно");
+                        }
+                    }
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Dell\\IdeaProjects\\Scholarship\\src\\main\\resources\\com\\example\\scholarship\\student1.txt"))) {
                     String line;
                     while ((line = reader.readLine()) != null) {
@@ -69,18 +105,6 @@ public class Authorization {
                                 e.printStackTrace();
                             }
                             System.out.println("Верный пароль");
-                        } else {try {
-                            FXMLLoader loader = new FXMLLoader();
-                            loader.setLocation(getClass().getResource("Error.fxml"));
-                            loader.load();
-                            Parent root = loader.getRoot();
-                            Stage stage = new Stage();
-                            stage.setScene(new Scene(root));
-                            stage.show();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                            System.out.println("Данные введены некорректно");
                         }
                     }
                 } catch (FileNotFoundException e) {
@@ -295,29 +319,7 @@ public class Authorization {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Dell\\IdeaProjects\\Scholarship\\src\\main\\resources\\com\\example\\scholarship\\accountantP.txt"))) {
-                    String line;
-                    while ((line = reader.readLine()) != null) {
-                        if (line.equals(pass.getText().trim())) {
-                            try {
-                                FXMLLoader loader = new FXMLLoader();
-                                loader.setLocation(getClass().getResource("Groups.fxml"));
-                                loader.load();
-                                Parent root = loader.getRoot();
-                                Stage stage = new Stage();
-                                stage.setScene(new Scene(root));
-                                stage.show();
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
-                            System.out.println("Верный пароль");
-                        }
-                    }
-                } catch (FileNotFoundException e) {
-                    throw new RuntimeException(e);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+
 
             });
 
