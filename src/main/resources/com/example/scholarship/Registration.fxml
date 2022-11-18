@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scholarship.Registration">
+   <children>
+      <Label layoutX="406.0" layoutY="103.0" text="Регистрация">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="35.0" prefHeight="37.0" prefWidth="345.0" text="Назначение академической стипендии" textFill="#be770c">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="login" layoutX="396.0" layoutY="157.0" promptText="Придумайте логин" />
+      <TextField fx:id="pass" layoutX="396.0" layoutY="207.0" promptText="Придумайте пароль" />
+      <Button fx:id="button1" layoutX="384.0" layoutY="258.0" mnemonicParsing="false" text="Бухгалтер" />
+      <Button fx:id="button2" layoutX="503.0" layoutY="258.0" mnemonicParsing="false" text="Студент" />
+      <ImageView fitHeight="199.0" fitWidth="199.0" layoutX="69.0" layoutY="120.0">
+         <image>
+            <Image url="@../../../../../../../../Desktop/Курсовая - тестирование/Картинки/photo_2022-11-11_15-22-06_cut-phot.ru.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

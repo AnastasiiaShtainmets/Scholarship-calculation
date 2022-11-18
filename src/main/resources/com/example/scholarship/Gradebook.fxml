@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scholarship.Gradebook">
+   <children>
+      <Label layoutX="27.0" layoutY="36.0" text="Назначение академической стипендии" textFill="#f6b80e">
+         <font>
+            <Font name="Times New Roman" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="81.0" text="Отчет о стипендии за 2022 год" textFill="#ddad7c">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="341.0" layoutY="113.0" prefHeight="237.0" prefWidth="228.0">
+        <columns>
+          <TableColumn fx:id="nameT" prefWidth="75.0" text="ФИО" />
+          <TableColumn fx:id="estimatesT" prefWidth="75.0" text="Оценки" />
+            <TableColumn fx:id="scholarshipT" prefWidth="75.0" text="Стипендия" />
+        </columns>
+      </TableView>
+      <VBox fx:id="box" layoutX="83.0" layoutY="81.0" prefHeight="197.0" prefWidth="199.0">
+         <children>
+            <Label text="ФИО" />
+            <TextField fx:id="nameB" />
+            <Label text="Оценки" />
+            <TextField fx:id="estimatesB" />
+            <Label text="Стипендия" />
+            <TextField fx:id="scholarshipB" />
+            <Button fx:id="Save" mnemonicParsing="false" prefHeight="25.0" prefWidth="199.0" text="Сохранить" textAlignment="CENTER" />
+         </children>
+      </VBox>
+      <Button fx:id="Remove" layoutX="425.0" layoutY="360.0" mnemonicParsing="false" text="Удалить" />
+      <ImageView fitHeight="99.0" fitWidth="101.0" layoutX="33.0" layoutY="274.0">
+         <image>
+            <Image url="@Notebook.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

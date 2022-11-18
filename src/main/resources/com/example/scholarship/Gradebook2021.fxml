@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="40.0" layoutY="32.0" text="Назначение академической стипендии" textFill="#f89d26">
+         <font>
+            <Font name="Times New Roman" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="397.0" layoutY="74.0" text="Отчет 2021 года" textFill="#e0b868">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="236.0" fitWidth="376.0" layoutX="21.0" layoutY="136.0">
+         <image>
+            <Image url="@gradebook.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

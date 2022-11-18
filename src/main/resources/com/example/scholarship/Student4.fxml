@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="51.0" layoutY="44.0" text="Назначение академической стипендии" textFill="#eb8435">
+         <font>
+            <Font name="Times New Roman" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="415.0" layoutY="102.0" text="Ваша стипендия" textFill="#d7b934">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="467.0" layoutY="144.0" text="1253 рублей" textFill="#f25959">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <MenuBar layoutX="37.0" layoutY="129.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Ваши оценки">
+            <items>
+              <MenuItem mnemonicParsing="false" text="&quot;5&quot; - 10" />
+              <MenuItem mnemonicParsing="false" text="&quot;4&quot; - 2" />
+              <MenuItem mnemonicParsing="false" text="&quot;3&quot; - 0" />
+                  <MenuItem mnemonicParsing="false" text="Задолженности - 0" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="228.0" fitWidth="228.0" layoutX="159.0" layoutY="102.0">
+         <image>
+            <Image url="@st4.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="127.0" fitWidth="127.0" layoutX="441.0" layoutY="233.0">
+         <image>
+            <Image url="@Coffee.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
